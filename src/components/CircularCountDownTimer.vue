@@ -13,7 +13,10 @@
                 class="item"
                 :style="{width: inner_size+'px', height: inner_size+'px', paddingLeft: padding+'px', paddingRight: padding+'px', float: 'left', direction: 'ltr', position: 'relative'}"
             >
-                <div :style="{width: inner_size+'px', height: inner_size+'px', lineHeight: inner_size+'px', position: 'absolute', fontSize: number_font_size+'px'}">
+                <div
+                    :style="{width: inner_size+'px', height: inner_size+'px', lineHeight: inner_size+'px', position: 'absolute', fontSize: number_font_size+'px'}"
+                    class="item-number"
+                >
                     {{ factor * hours }}
                 </div>
                 <svg
@@ -45,7 +48,7 @@
                     v-if="hourLabel"
                     ref="label"
                     :style="{height: label_font_size+'px', fontSize: label_font_size+'px'}"
-                    class="item-number"
+                    class="item-text"
                 >
                     {{hourLabel}}
                 </div>
